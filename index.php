@@ -58,4 +58,16 @@ foreach (array_keys($slabs['items']) as $slab_no){
 
 }
 
+
+/*
+ * Time to display some output.
+ */
+
+include_once('template/header.html');
+
+require_once('classes/TableViewer.class.php');
+echo TableViewer::getTableHTML($cache);
+
+include_once('template/footer.html');
+
 ?>
