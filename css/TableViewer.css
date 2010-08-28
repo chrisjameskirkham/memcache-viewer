@@ -1,18 +1,46 @@
+body {
+	font-family:courier;
+	font-size:11px;
+}
+
 table#TableViewer {
 	border-collapse:collapse;
-	border:1px solid black;
+	border:1px solid silver;
 }
 
 table#TableViewer tr {
-	border:1px solid black;
+	border:1px solid silver;
+}
+
+table#TableViewer tr:hover {
+        background:#FBFFCC;
 }
 
 table#TableViewer tr th {
-	border:1px solid black;
+	border:1px solid silver;
 	padding:3px;
+	background:#C2FEFF;
 }
 
 table#TableViewer tr td {
-	border:1px solid black;
+	border:1px solid silver;
 	padding:3px;
+}
+
+table#TableViewer tr td.key {
+}
+
+table#TableViewer tr td.slab {
+        text-align:right;
+}
+
+table#TableViewer tr td.size {
+        text-align:right;
+}
+
+table#TableViewer tr td.expiry_date {
+}
+
+table#TableViewer tr td.expires_in {
+	text-align:center;
 }
