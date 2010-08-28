@@ -52,6 +52,8 @@ class Item {
 
 		$total = $timestamp_to - $timestamp_from;
 
+		if ($total < 0) return "expired";
+
 		$days = floor($total / (24 * 60 * 60));
 		$total -= $days * (24 * 60 * 60);
 		$hours = floor($total / (60 * 60));
