@@ -23,11 +23,11 @@ class TableViewer {
 
 			$output .= '<tr>';
 
-			$output .= '<td>' . $item->getKey() . '</td>';
-			$output .= '<td>' . $item->getSlab() . '</td>';
-			$output .= '<td>' . $item->getSize() . '</td>';
-			$output .= '<td>' . $item->getFormattedTime() . '</td>';
-			$output .= '<td>' . $item->getFormattedTime($current_time) . '</td>';
+			$output .= '<td class="key">' . $item->getKey() . '</td>';
+			$output .= '<td class="slab">' . $item->getSlab() . '</td>';
+			$output .= '<td class="size">' . $item->getSize() . '</td>';
+			$output .= '<td class="expiry_date">' . $item->getFormattedTime() . '</td>';
+			$output .= '<td class="expires_in">' . $item->getFormattedTime($current_time) . '</td>';
 
 			$output .= '</tr>';
 
