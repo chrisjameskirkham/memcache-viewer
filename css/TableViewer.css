@@ -27,6 +27,10 @@ table#TableViewer tr td {
 	padding:3px;
 }
 
+table#TableViewer tr td.expired {
+	color:red;
+}
+
 table#TableViewer tr td.key {
 }
 
