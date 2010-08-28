@@ -36,5 +36,26 @@ date_default_timezone_set(isset($config['MISC']['PHP_TIMEZONE'])
 	? $config['MISC']['PHP_TIMEZONE']
 	: 'Europe/London');
 
-echo 'end';
+
+/*
+ * OK, it's time to get the items and add them to our cache array.
+ */
+
+require_once('classes/Item.class.php');
+require_once('classes/Cache.class.php');
+
+$cache = new Cache();
+
+$slabs = $MEMCACHE->getStats('items');
+foreach (array_keys($slabs['items']) as $slab_no){
+	$items = $MEMCACHE->getStats('cachedump', $slab_no, $slabs['items'][$slab_no]['number']);
+	foreach(array_keys($items) as $item_key){
+		$cache->addCacheItem(new Item($item_key,
+		                              $slab_no,
+		                              $items[$item_key][1],
+		                              $items[$item_key][0] ));
+	}
+
+}
+
 ?>
