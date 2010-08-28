@@ -56,9 +56,9 @@ class Item {
 		$total -= $days * (24 * 60 * 60);
 		$hours = floor($total / (60 * 60));
 		$total -= $hours * (60 * 60);
-		$mins = floor($total / 60);
-		$total -= $mins * 60;
-		$secs = $total;
+		$minutes = floor($total / 60);
+		$total -= $minutes * 60;
+		$seconds = $total;
 
 		$output = '';
 		if ($days > 0)
