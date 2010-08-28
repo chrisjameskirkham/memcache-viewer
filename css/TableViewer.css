@@ -2,3 +2,17 @@ table#TableViewer {
 	border-collapse:collapse;
 	border:1px solid black;
 }
+
+table#TableViewer tr {
+	border:1px solid black;
+}
+
+table#TableViewer tr th {
+	border:1px solid black;
+	padding:3px;
+}
+
+table#TableViewer tr td {
+	border:1px solid black;
+	padding:3px;
+}
