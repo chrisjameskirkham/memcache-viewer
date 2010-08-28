@@ -31,4 +31,10 @@ in_array('memcache', $output)
 $MEMCACHE = new Memcache();
 $MEMCACHE->pconnect(SERVER, PORT);
 
+//set timezone
+date_default_timezone_set(isset($config['MISC']['PHP_TIMEZONE'])
+	? $config['MISC']['PHP_TIMEZONE']
+	: 'Europe/London');
+
+echo 'end';
 ?>
