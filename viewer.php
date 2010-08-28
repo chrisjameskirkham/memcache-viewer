@@ -63,6 +63,8 @@ foreach (array_keys($slabs['items']) as $slab_no){
  * Time to display some output.
  */
 
+$cache->itemSort(ASC_TIME);
+
 require_once('classes/TableViewer.class.php');
 echo TableViewer::getTableHTML($cache);
 
