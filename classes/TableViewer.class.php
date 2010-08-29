@@ -17,7 +17,7 @@ class TableViewer {
 
 		$current_time = time();
 
-		$output = '<table id="TableViewer"><tr><th>Key</th><th>Slab</th><th>Size</th><th>Expiration Time</th><th>Expires In</th></tr>';
+		$output = '<table id="TableViewer"><tr><th>Key</th><th>Slab</th><th>Size</th><th>Expiration Time</th><th>Expires In</th><th>Delete</th></tr>';
 
 		foreach ($cache->items as $item){
 
@@ -28,6 +28,7 @@ class TableViewer {
 			$output .= '<td class="size">' . $item->getSize() . '</td>';
 			$output .= '<td class="expiry_date">' . $item->getFormattedTime() . '</td>';
 			$output .= '<td class="expires_in">' . $item->getFormattedTime($current_time) . '</td>';
+			$output .= '<td class="delete"><a href="delete.php?delete_item=' . $item->getKey() . '">delete</a></td>';
 
 			$output .= '</tr>';
 
