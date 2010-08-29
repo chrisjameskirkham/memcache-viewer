@@ -14,8 +14,9 @@
 <body>
 
 <div id="top">
-	<a href="logout.php">logout</a>
-	<label for="refresh_rate">Refresh Rate</label><input type="text" value="1" name="refresh_rate" />
+	<img src="images/loading.gif" id="loading_gif" alt="loading" />
+	<input type="button" onclick="location.href='logout.php'" value="Logout" />
+	<label for="refresh_rate">Refresh Rate (secs)</label><input type="text" onchange="setRefreshInterval()" value="1" id="refresh_rate" name="refresh_rate" />
 </div>
 
 <div id="content">

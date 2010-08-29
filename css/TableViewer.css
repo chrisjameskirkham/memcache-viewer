@@ -1,6 +1,19 @@
 body {
 	font-family:courier;
 	font-size:11px;
+	margin:0;
+}
+
+div#top {
+	border-top:5px solid black;
+	padding:5px;
+}
+
+div#top img#loading_gif {
+}
+
+div#top img#loading_gif.hidden {
+	visibility:hidden;
 }
 
 table#TableViewer {
