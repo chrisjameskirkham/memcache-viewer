@@ -25,4 +25,14 @@ Memcache-Viewer Copyright (c) 2010 -- Chris Kirkham
 
 
 
-Memcache-Viewer: A PHP web application that dumps useful information about a Memcache cache that also allows basic control.
+Memcache-Viewer: A PHP web application that dumps useful information
+about a Memcache cache that also allows basic control.
+
+Current Features:
+
+	* Listing (auto refresh) each item by key with slab and
+	  expiration time.
+
+	* Deleting an item from the cache by key.
+
+	* Password login (password set in config file).
