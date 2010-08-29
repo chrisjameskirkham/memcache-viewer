@@ -23,6 +23,41 @@ div#top img#loading_gif.hidden {
 	visibility:hidden;
 }
 
+div#top input[type="button"] {
+	float:right;
+	border:1px solid silver;
+	font-family:courier;
+}
+
+div#settings {
+	border-top:1px solid black;
+	margin-top:5px;
+	padding:5px 21px;
+	overflow:auto;
+}
+
+div#top div#settings label {
+	float:left;
+	text-align:right;
+	display:block;
+	clear:both;
+	position:relative;
+	top:3px;
+}
+
+div#top div#settings input[type="text"] {
+	border:1px solid silver;
+	width:3em;
+	float:left;
+	margin-right:10px;
+	margin-left:5px;
+}
+
+div#content {
+	clear:both;
+	padding:5px;
+}
+
 table#TableViewer {
 	border-collapse:collapse;
 	border:1px solid silver;
