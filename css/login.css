@@ -1,6 +1,7 @@
 body {
 	font-family:courier;
-	/background:#D1FAFF;
+	margin:0;
+	border-top:5px solid black;
 }
 
 h1 {
