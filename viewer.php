@@ -1,7 +1,7 @@
 <?php
 
 //get config settings
-$config = parse_ini_file('config.ini', true);
+$config = parse_ini_file('config.ini.php', true);
 
 //check for debug mode, and enable if on
 if (isset($config['DEBUG']['DEBUG_MODE']) && $config['DEBUG']['DEBUG_MODE'] == 1){
