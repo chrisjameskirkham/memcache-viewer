@@ -9,7 +9,14 @@ div#top {
 	padding:5px;
 }
 
+div#top h1 {
+	display:inline;
+	margin-left:21px;
+	font-size:16px;
+}
+
 div#top img#loading_gif {
+	position:absolute;
 }
 
 div#top img#loading_gif.hidden {

@@ -5,6 +5,8 @@ $(document).ready(function(){
 	colourExpired();
 	setRefreshInterval();
 
+	document.getElementById('loading_gif').style.top = (document.getElementById('top').offsetHeight / 2 - 7) + 'px';
+
 });
 
 
