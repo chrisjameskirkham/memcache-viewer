@@ -3,11 +3,22 @@
 
 	<head>
 		<title>MemcacheViewer Login</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<script src="scripts/jquery.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("input#passwd").focus();
+			});
+		</script>
 	</head>
 
 	<body>
 		<form method="post" action="login.php">
-			password: <input type="password" value="" name="passwd" />
+			<h1>MemcacheViewer</h1>
+			<div id="login_box">
+				<label for="passwd">Password:</label><input type="password" value="" id="passwd" name="passwd" />
+			</div>
+			<div id="footer">Copyright &copy; Chris Kirkham 2010</div>
 		</form>
 	
 	</body>

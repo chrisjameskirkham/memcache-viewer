@@ -1,0 +1,44 @@
+body {
+	font-family:courier;
+	/background:#D1FAFF;
+}
+
+h1 {
+	width:400px;
+	margin:0 auto;
+	margin-top:100px;
+	display:block;
+	text-align:center;
+	margin-bottom:10px;
+	font-size:45px;
+}
+
+div#login_box {
+	width:400px;
+	border:1px solid silver;
+	padding:10px;
+	margin:0 auto;
+	background:#D1FAFF;
+}
+
+div#login_box label {
+	font-size:32px;
+	display:block;
+	float:left;
+}
+
+div#login_box input[type="password"] {
+	border:1px solid silver;
+	font-size:32px;
+	width:400px;
+	background:#FBFFCC;
+}
+
+div#footer {
+	font-size:10px;
+	width:400px;
+	margin:0 auto;
+	text-align:center;
+	margin-top:10px;
+	color:silver;
+}
