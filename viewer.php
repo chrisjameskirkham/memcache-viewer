@@ -47,6 +47,8 @@ require_once('classes/Cache.class.php');
 $cache = new Cache();
 
 $slabs = $MEMCACHE->getStats('items');
+!empty($slabs['items']) or die('Memcache cache is empty.');
+
 foreach (array_keys($slabs['items']) as $slab_no){
 	$items = $MEMCACHE->getStats('cachedump', $slab_no, $slabs['items'][$slab_no]['number']);
 	foreach(array_keys($items) as $item_key){
