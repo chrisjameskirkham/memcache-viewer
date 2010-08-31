@@ -36,10 +36,26 @@ div#login_box input[type="password"] {
 }
 
 div#footer {
-	font-size:10px;
+	font-size:11px;
 	width:400px;
 	margin:0 auto;
 	text-align:center;
 	margin-top:10px;
-	color:silver;
+	color:#8A8A8A;
+}
+
+div#footer a {
+	color:#8A8A8A;
+}
+
+div#footer span {
+	border-left:1px solid silver;
+	margin-left:5px;
+	padding-left:5px;
+}
+
+div#footer span:first-child {
+	margin-left:0;
+	padding-left:0;
+	border-left:none;
 }
