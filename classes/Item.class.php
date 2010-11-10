@@ -43,7 +43,7 @@ class Item {
 		if ($timestamp == 0)
 			return date('r', $this->expiration_timestamp);
 		else
-			return $this::getRemainingTime($timestamp, $this->expiration_timestamp);
+			return self::getRemainingTime($timestamp, $this->expiration_timestamp);
 
 	}//getTime
 
