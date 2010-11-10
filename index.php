@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!$_SESSION['logged_in']){
+if (!isset($_SESSION['logged_in'])){
 	include_once('template/login.html');
 	exit(0);
 }
