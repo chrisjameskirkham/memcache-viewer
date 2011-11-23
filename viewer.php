@@ -29,7 +29,7 @@ in_array('memcache', $output)
 	or die('Memcache PHP module doesn\'t appear to be installed. It is needed.');
 
 $MEMCACHE = new Memcache();
-$MEMCACHE->pconnect(SERVER, PORT);
+$MEMCACHE->connect(SERVER, PORT);
 
 //set timezone
 date_default_timezone_set(isset($config['MISC']['PHP_TIMEZONE'])
@@ -60,6 +60,12 @@ foreach (array_keys($slabs['items']) as $slab_no){
 
 }
 
+if (isset($_GET['flush']) && $_GET['flush'] == 1) {
+	// $MEMCACHE->flush() does not work in the windows memcached-driver implementation I found ...
+	foreach(array_keys($items) as $item_key) {
+		$MEMCACHE->delete($item_key);
+	}
+}
 
 /*
  * Time to display some output.
