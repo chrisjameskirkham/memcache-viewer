@@ -6,15 +6,16 @@ class Item {
 	private $expiration_timestamp;
 	private $slab;
 	private $size;
+    private $content;
 
-	public function __construct($key, $slab, $expiration_timestamp, $size){
+    public function __construct($key, $slab, $expiration_timestamp, $size, $content = ""){
 
 		$this->key = $key;
 		$this->slab = $slab;
 		$this->expiration_timestamp = $expiration_timestamp;
 		$this->size = $size;
-
-	}//constructor
+        $this->content = $content;
+    }//constructor
 
 	public function getKey(){
 		return $this->key;
@@ -31,6 +32,11 @@ class Item {
 	public function getTimestamp(){
 		return $this->expiration_timestamp;
 	}
+
+    public function getContent()
+    {
+        return $this->content;
+    }
 
 
 	/*
@@ -79,7 +85,4 @@ class Item {
 
 	}//getRemainingTime
 
-}//Item
-
-
-?>
+}

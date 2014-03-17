@@ -52,10 +52,15 @@ $slabs = $MEMCACHE->getStats('items');
 foreach (array_keys($slabs['items']) as $slab_no){
 	$items = $MEMCACHE->getStats('cachedump', $slab_no, $slabs['items'][$slab_no]['number']);
 	foreach(array_keys($items) as $item_key){
-		$cache->addCacheItem(new Item($item_key,
-		                              $slab_no,
-		                              $items[$item_key][1],
-		                              $items[$item_key][0] ));
+		$cache->addCacheItem(
+            new Item(
+                $item_key,
+                $slab_no,
+                $items[$item_key][1],
+                $items[$item_key][0],
+                json_encode($MEMCACHE->get($item_key))
+            )
+        );
 	}
 
 }
