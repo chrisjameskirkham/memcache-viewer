@@ -13,10 +13,14 @@ function setRefreshInterval(){
 	interval = setInterval('pageReload()', 1000 * document.getElementById('refresh_rate').value);
 }
 
-function pageReload(){
+function pageReload(flush){
 
 	$("img#loading_gif").removeClass("hidden");
-	$("div#content").load("viewer.php", colourExpired);
+	if (flush)
+		$("div#content").load("viewer.php?flush=1", colourExpired);
+	else
+		$("div#content").load("viewer.php", colourExpired);
+
 	setTimeout(function(){$("img#loading_gif").addClass("hidden")}, 100);
 
 }
